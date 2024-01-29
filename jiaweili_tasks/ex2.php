@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php include 'header.php'; ?>
-   <h3> header&footer </h3>
+   <h3> EX2:header&footer </h3>
    <?php include 'footer.php'; ?>
 </body>
 </html>
