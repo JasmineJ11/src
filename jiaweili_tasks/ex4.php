@@ -12,10 +12,21 @@ include 'header.php'; ?>
     <input type="submit" value="Submit">
 </form>
 
+ <h1>3. Switch Case: Write a PHP script that gets the current month and prints one of the following responses, depending on whether it's August or not: It's August, so it's still holiday. Not August, this is Month-name so I don't have any holidays Hint: You can use date(F) function to get the current month name. Check Date function from the php manual page.</h1>
 
+<?php
+$month = date("F");
+switch ($month){
+    case "Aug":
+        echo "It's August, so it's still holiday.";
+        break;
+    default:
+        echo "Not August, this is $month so I don't have any holidays."."<br> <br>";
+        break;
+}
+?>
 
-
-
+<h1>4. For Loop: Write a PHP script that will print the multiplication table of a number (n, use form to get user input).</h1>
 
 
 <?php
