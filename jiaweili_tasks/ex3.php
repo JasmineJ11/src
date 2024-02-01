@@ -1,3 +1,5 @@
+<div class="container">
+
 <?php
 $title = "Exercise 3: Variable, Strings & Operators";
 include 'header.php'; ?>
@@ -82,16 +84,25 @@ function get_browser_name($user_agent) {
             return $browser;
         }
     }
-
     return 'Unknown';
 }
 $browser = get_browser_name($user_agent);
-
 echo "You are using: $browser"."<br><br> ";
 ?>
+
+
+
 
 <h1>8. File Modification Time: Write a PHP script in the footer section of your universal footer to display the last modification time of a file. Hint: Use predefined variable $_SERVER, basename function  to get the filename , filetime function to get the last modified time & date function to print the date and time Predefined Variables</h1>
 
 
+
+
+
+
 <?php include 'footer.php'; ?>
 
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/3743480f3c.js" crossorigin="anonymous"></script>

@@ -26,10 +26,9 @@
 
     <?php
     $file = basename($_SERVER['SCRIPT_FILENAME']);
-    if (file_exists($file)) {
         $last_modified = date("F d Y H:i:s.", filemtime($file));
-        echo "was last modified on: $last_modified";
-    }
+        echo $file . "was last modified on: $last_modified";
+
     ?>
 
 </footer>
