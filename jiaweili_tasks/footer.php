@@ -24,6 +24,14 @@
     <div class="col-sm-4">WEBweb</div>
     <div class="col-sm-4">HAMK</div>
 
+    <?php
+    $file = basename($_SERVER['SCRIPT_FILENAME']);
+    if (file_exists($file)) {
+        $last_modified = date("F d Y H:i:s.", filemtime($file));
+        echo "was last modified on: $last_modified";
+    }
+    ?>
+
 </footer>
 </body>
 </html>
