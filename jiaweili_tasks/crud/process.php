@@ -1,7 +1,8 @@
 <?php
 //what do to with the data
+global $conn;
 if (isset($_POST['submit'])){
-    $fanme = $_POST['fname'];
+    $fname = $_POST['fname'];
     $lname = $_POST['lname'];
     $city = $_POST['city'];
     $groupid = $_POST['groupid'];
@@ -22,6 +23,5 @@ else{
 }
 
 //close the database connection
-$conn -> close
-
+$conn -> close();
 ?>
