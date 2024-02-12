@@ -8,6 +8,30 @@
     <title>Document</title>
 </head>
 <body>
+<?php
+include '../header.php';
+?>
+
+<script>
+    document.write("Hello World")
+    window.alert("this is an alert box")
+</script>
+
+<noscript>
+    You need to enable or install JavaScript support in your browser
+</noscript>
+
+<script>
+    function hello() {
+        document.write("this is after the page has loaded")
+    }
+</script>
+
+<button onClick="document.write('this is something')" > click me</button>
+
+
+
+
 <form action="processReg.php" method="post" name="register">
     <label>
         Username:
@@ -30,6 +54,23 @@
 </form>
 
 
+
+<form action="processReg.php" method="post" name="login">
+    <label>
+        Username:
+        <input name="name" type="text" required>
+    </label>
+
+    <label>
+        Password:
+        <input name="password2" type="password" required>
+    </label>
+
+
+    <label>
+        <input name="submit2" type="submit" value="login">
+    </label>
+</form>
 
 </body>
 </html>
