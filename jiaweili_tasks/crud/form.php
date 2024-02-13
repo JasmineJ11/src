@@ -4,14 +4,14 @@ include '../header.php';
 ?>
 
 <form action="" method="post">
-Name:<input type="text" name="fname" required minlength="3" maxlength="30" id="name"><br>
-    <span id="nameErrow"></span>
+Name:<input type="text" name="fname" required minlength="3" maxlength="30" id="name" onblur="validateName()"><br>
+    <span id="nameError"></span>
 Email: <input type="email" name="email" required id="email"><br>
-    <span id="emailErrow"></span>
+    <span id="emailError"></span>
 Password <input type="password" name="password" required minlength="6" maxlength="20" id="password"><br>
-    <span id="passwordErrow"></span>
+    <span id="passwordError"></span>
     Age <input type="number" name="age" min="18" max="108" id="age"><br>
-    <span id="ageErrow"></span>
+    <span id="ageError"></span>
 
 <button type="submit" name="regSub">Submit</button>
 </form>
@@ -48,6 +48,16 @@ Password <input type="password" name="password" required minlength="6" maxlength
 
     function validatePassword(){
         const password = document.getElementById("password").value;
+        passwordError = document.getElementById("passwordError");
+
+        if(password.length < 6 ){
+            passwordError.innerHTML = "at least 6";
+            return false;
+        }
+        else {
+            passwordError.innerHTML= "";
+            return true;
+        }
 
     }
 
@@ -58,6 +68,8 @@ Password <input type="password" name="password" required minlength="6" maxlength
 
     //event listeners
     document.getElementById("name").addEventListener("input", validateName);
+    document.getElementById("email").addEventListener("input", validateEmail);
+    document.getElementById("password").addEventListener("input", validatePassword);
 
 
 </script>
